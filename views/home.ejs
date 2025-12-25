@@ -1,0 +1,227 @@
+<%- include('layout', { body: `
+    <div>
+    <div class="swiper heroSwiper h-[600px] md:h-[750px] relative">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide relative flex items-center" style="background-image: linear-gradient(rgba(14, 41, 84, 0.6), rgba(14, 41, 84, 0.6)), url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=2074&auto=format&fit=crop');">
+                <div class="container mx-auto px-4 text-center md:text-left">
+                    <div class="max-w-2xl text-white">
+                        <span class="inline-block bg-visa-red px-3 py-1 text-sm font-bold uppercase tracking-wider mb-4 rounded">Trusted Immigration</span>
+                        <h1 class="text-4xl md:text-6xl font-bold font-heading mb-6 leading-tight">Your Gateway to the World</h1>
+                        <p class="text-lg mb-8 opacity-90">We provide professional visa and immigration services to help you reach your destination with ease and confidence.</p>
+                        <div class="flex flex-col md:flex-row gap-4 justify-center md:justify-start">
+                            <a href="#" class="bg-visa-red text-white px-8 py-4 font-bold font-heading uppercase hover:bg-white hover:text-visa-blue transition duration-300 rounded">Discover More</a>
+                            <a href="#" class="bg-transparent border-2 border-white text-white px-8 py-4 font-bold font-heading uppercase hover:bg-white hover:text-visa-blue transition duration-300 rounded">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide relative flex items-center" style="background-image: linear-gradient(rgba(14, 41, 84, 0.6), rgba(14, 41, 84, 0.6)), url('https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?q=80&w=2050&auto=format&fit=crop');">
+                <div class="container mx-auto px-4 text-center md:text-left">
+                    <div class="max-w-2xl text-white">
+                        <span class="inline-block bg-visa-red px-3 py-1 text-sm font-bold uppercase tracking-wider mb-4 rounded">Expert Consultants</span>
+                        <h1 class="text-4xl md:text-6xl font-bold font-heading mb-6 leading-tight">HOW TO PICK A STUDY ABROAD DESTINATION</h1>
+                        <p class="text-lg mb-8 opacity-90">Whether it's for study, business, or tourism, our experts are here to guide you through every step.</p>
+                        <a href="#" class="inline-block bg-visa-red text-white px-8 py-4 font-bold font-heading uppercase hover:bg-white hover:text-visa-blue transition duration-300 rounded">Our Services</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-button-next text-white !hidden md:!block"></div>
+        <div class="swiper-button-prev text-white !hidden md:!block"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <div class="relative -mt-16 z-20 container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-white p-8 shadow-xl rounded border-b-4 border-visa-red group hover:-translate-y-2 transition duration-300">
+                <div class="text-5xl text-visa-blue mb-4 group-hover:text-visa-red transition"><i class="fa-solid fa-passport"></i></div>
+                <h3 class="text-xl font-bold font-heading text-visa-blue mb-2">Visa Processing</h3>
+                <p class="text-sm leading-relaxed">Fast and reliable processing for all visa categories including tourist and business.</p>
+            </div>
+            <div class="bg-visa-blue p-8 shadow-xl rounded border-b-4 border-visa-red text-white group hover:-translate-y-2 transition duration-300">
+                <div class="text-5xl text-white mb-4"><i class="fa-solid fa-user-graduate"></i></div>
+                <h3 class="text-xl font-bold font-heading mb-2">Study Abroad</h3>
+                <p class="text-sm leading-relaxed opacity-90">Guidance for students looking to pursue education in top international universities.</p>
+            </div>
+            <div class="bg-white p-8 shadow-xl rounded border-b-4 border-visa-red group hover:-translate-y-2 transition duration-300">
+                <div class="text-5xl text-visa-blue mb-4 group-hover:text-visa-red transition"><i class="fa-solid fa-briefcase"></i></div>
+                <h3 class="text-xl font-bold font-heading text-visa-blue mb-2">Immigration Law</h3>
+                <p class="text-sm leading-relaxed">Expert legal advice for permanent residency, citizenship, and work permits.</p>
+            </div>
+        </div>
+    </div>
+
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="w-full lg:w-1/2 relative">
+                    <div class="grid grid-cols-2 gap-4">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1000&auto=format&fit=crop" class="w-full h-64 object-cover rounded-lg shadow-lg" alt="Meeting">
+                        <img src="https://images.unsplash.com/photo-1577962917302-cd874c4e31d2?q=80&w=1000&auto=format&fit=crop" class="w-full h-64 object-cover rounded-lg shadow-lg mt-8" alt="Visa">
+                    </div>
+                    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-visa-red text-white p-6 rounded-full w-32 h-32 flex flex-col justify-center items-center text-center shadow-xl">
+                        <span class="text-3xl font-bold font-heading">15+</span>
+                        <span class="text-xs uppercase">Years Exp.</span>
+                    </div>
+                </div>
+
+                <div class="w-full lg:w-1/2">
+                    <span class="text-visa-red font-bold font-heading uppercase tracking-widest text-sm mb-2 block">About Vidhya Voyage</span>
+                    <h2 class="text-4xl font-bold font-heading text-visa-blue mb-6">Your Journey to Global Knowledge Starts Here</h2>
+                    <p class="mb-6 leading-relaxed">Welcome to Vidya Voyage Ltd, a forward-thinking startup dedicated to redefining the international education experience. While the world of global study is expanding, the path to get there is becoming more complex. We founded Vidya Voyage to act as your expert navigator, turning the daunting process of overseas education into a structured, successful journey.</p>
+
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-check-circle text-visa-red text-xl"></i>
+                            <span class="font-medium text-visa-blue">Certified Legal Advisors</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-check-circle text-visa-red text-xl"></i>
+                            <span class="font-medium text-visa-blue">99% Visa Approval Rate</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-check-circle text-visa-red text-xl"></i>
+                            <span class="font-medium text-visa-blue">Direct Interviews with Officials</span>
+                        </li>
+                    </ul>
+
+                    <a href="#" class="bg-visa-blue text-white px-8 py-3 rounded font-bold font-heading hover:bg-visa-red transition duration-300">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-20 bg-visa-light">
+        <div class="container mx-auto px-4 text-center mb-16">
+            <span class="text-visa-red font-bold font-heading uppercase tracking-widest text-sm">Your Journey Starts Here</span>
+            <h2 class="text-4xl font-bold font-heading text-visa-blue mt-2">Our Consultancy Services</h2>
+        </div>
+
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 group border border-gray-100">
+                <div class="w-16 h-16 bg-visa-light rounded-full flex items-center justify-center text-visa-red text-3xl mb-6 group-hover:bg-visa-red group-hover:text-white transition">
+                    <i class="fa-solid fa-book-open"></i>
+                </div>
+                <h3 class="text-2xl font-bold font-heading text-visa-blue mb-3 group-hover:text-visa-red transition">IELTS/PTE Training</h3>
+                <p class="text-sm mb-4 leading-relaxed">Expert coaching to help you achieve the high scores required for top global universities.</p>
+                <a href="#" class="text-visa-blue font-semibold text-sm uppercase flex items-center gap-2 group-hover:translate-x-2 transition">Explore Courses <i class="fa-solid fa-arrow-right text-visa-red"></i></a>
+            </div>
+
+            <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 group border border-gray-100">
+                <div class="w-16 h-16 bg-visa-light rounded-full flex items-center justify-center text-visa-red text-3xl mb-6 group-hover:bg-visa-red group-hover:text-white transition">
+                    <i class="fa-solid fa-building-columns"></i>
+                </div>
+                <h3 class="text-2xl font-bold font-heading text-visa-blue mb-3 group-hover:text-visa-red transition">Course Selection</h3>
+                <p class="text-sm mb-4 leading-relaxed">Finding the perfect match between your career goals and the right academic program.</p>
+                <a href="#" class="text-visa-blue font-semibold text-sm uppercase flex items-center gap-2 group-hover:translate-x-2 transition">View Programs <i class="fa-solid fa-arrow-right text-visa-red"></i></a>
+            </div>
+
+            <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 group border border-gray-100">
+                <div class="w-16 h-16 bg-visa-light rounded-full flex items-center justify-center text-visa-red text-3xl mb-6 group-hover:bg-visa-red group-hover:text-white transition">
+                    <i class="fa-solid fa-file-pen"></i>
+                </div>
+                <h3 class="text-2xl font-bold font-heading text-visa-blue mb-3 group-hover:text-visa-red transition">Educational Assistance</h3>
+                <p class="text-sm mb-4 leading-relaxed">Support with documentation, scholarship applications, and university entrance requirements.</p>
+                <a href="#" class="text-visa-blue font-semibold text-sm uppercase flex items-center gap-2 group-hover:translate-x-2 transition">Learn More <i class="fa-solid fa-arrow-right text-visa-red"></i></a>
+            </div>
+
+            <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 group border border-gray-100">
+                <div class="w-16 h-16 bg-visa-light rounded-full flex items-center justify-center text-visa-red text-3xl mb-6 group-hover:bg-visa-red group-hover:text-white transition">
+                    <i class="fa-solid fa-user-tie"></i>
+                </div>
+                <h3 class="text-2xl font-bold font-heading text-visa-blue mb-3 group-hover:text-visa-red transition">Student Consulting</h3>
+                <p class="text-sm mb-4 leading-relaxed">One-on-one mentorship to guide you through the entire international education landscape.</p>
+                <a href="#" class="text-visa-blue font-semibold text-sm uppercase flex items-center gap-2 group-hover:translate-x-2 transition">Book Session <i class="fa-solid fa-arrow-right text-visa-red"></i></a>
+            </div>
+
+            <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 group border border-gray-100">
+                <div class="w-16 h-16 bg-visa-light rounded-full flex items-center justify-center text-visa-red text-3xl mb-6 group-hover:bg-visa-red group-hover:text-white transition">
+                    <i class="fa-solid fa-passport"></i>
+                </div>
+                <h3 class="text-2xl font-bold font-heading text-visa-blue mb-3 group-hover:text-visa-red transition">Visa Guidance</h3>
+                <p class="text-sm mb-4 leading-relaxed">Comprehensive support for student visa applications to ensure a high success rate.</p>
+                <a href="#" class="text-visa-blue font-semibold text-sm uppercase flex items-center gap-2 group-hover:translate-x-2 transition">Check Eligibility <i class="fa-solid fa-arrow-right text-visa-red"></i></a>
+            </div>
+
+            <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition duration-300 group border border-gray-100">
+                <div class="w-16 h-16 bg-visa-light rounded-full flex items-center justify-center text-visa-red text-3xl mb-6 group-hover:bg-visa-red group-hover:text-white transition">
+                    <i class="fa-solid fa-plane-departure"></i>
+                </div>
+                <h3 class="text-2xl font-bold font-heading text-visa-blue mb-3 group-hover:text-visa-red transition">Pre-Deployment</h3>
+                <p class="text-sm mb-4 leading-relaxed">Preparing you for life abroad, from cultural etiquette to finding your student home.</p>
+                <a href="#" class="text-visa-blue font-semibold text-sm uppercase flex items-center gap-2 group-hover:translate-x-2 transition">View Guide <i class="fa-solid fa-arrow-right text-visa-red"></i></a>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="py-16 bg-visa-blue text-white relative bg-fixed" style="background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop'); background-blend-mode: overlay;">
+        <div class="container mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+                <div class="text-5xl font-bold font-heading mb-2">120+</div>
+                <p class="text-sm opacity-80 uppercase tracking-wider">Countries</p>
+            </div>
+            <div>
+                <div class="text-5xl font-bold font-heading mb-2">5k+</div>
+                <p class="text-sm opacity-80 uppercase tracking-wider">Happy Clients</p>
+            </div>
+            <div>
+                <div class="text-5xl font-bold font-heading mb-2">98%</div>
+                <p class="text-sm opacity-80 uppercase tracking-wider">Success Rate</p>
+            </div>
+            <div>
+                <div class="text-5xl font-bold font-heading mb-2">15</div>
+                <p class="text-sm opacity-80 uppercase tracking-wider">Years Experience</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 text-center mb-12">
+            <span class="text-visa-red font-bold font-heading uppercase tracking-widest text-sm">Testimonials</span>
+            <h2 class="text-4xl font-bold font-heading text-visa-blue mt-2">What Our Clients Say</h2>
+        </div>
+
+        <div class="container mx-auto px-4">
+            <div class="swiper testimonialSwiper pb-12">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="bg-visa-light p-8 rounded-lg text-center mx-4">
+                            <div class="w-20 h-20 mx-auto rounded-full overflow-hidden mb-4 border-4 border-white shadow">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User">
+                            </div>
+                            <p class="italic text-gray-600 mb-6">"Vidhya Voyage made my student visa process incredibly smooth. I got into my dream university in Canada without any hassle. Highly recommended!"</p>
+                            <h4 class="font-bold text-visa-blue font-heading">Sarah Johnson</h4>
+                            <span class="text-xs text-visa-red font-bold uppercase">Student Visa - Canada</span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="bg-visa-light p-8 rounded-lg text-center mx-4">
+                            <div class="w-20 h-20 mx-auto rounded-full overflow-hidden mb-4 border-4 border-white shadow">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User">
+                            </div>
+                            <p class="italic text-gray-600 mb-6">"Professional and efficient. They helped me with my business visa for the UK. The team is very knowledgeable and supportive."</p>
+                            <h4 class="font-bold text-visa-blue font-heading">Michael Chen</h4>
+                            <span class="text-xs text-visa-red font-bold uppercase">Business Visa - UK</span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="bg-visa-light p-8 rounded-lg text-center mx-4">
+                            <div class="w-20 h-20 mx-auto rounded-full overflow-hidden mb-4 border-4 border-white shadow">
+                                <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="User">
+                            </div>
+                            <p class="italic text-gray-600 mb-6">"I reunited with my husband thanks to Vidhya Voyage's spouse visa services. They handled all the complicated paperwork perfectly."</p>
+                            <h4 class="font-bold text-visa-blue font-heading">Emma Davis</h4>
+                            <span class="text-xs text-visa-red font-bold uppercase">Spouse Visa - USA</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination mt-6"></div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+` }) %>

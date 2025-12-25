@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vidya Voyage | <%= title %></title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: { extend: { colors: { 'visa-blue': '#0E2954', 'visa-red': '#E93E33', 'visa-light': '#F4F7FA', 'visa-text': '#555555' },
+            fontFamily: { sans: ['Poppins', 'sans-serif'], heading: ['Barlow', 'sans-serif'] } } }
+        }
+    </script>
+</head>
+<body class="font-sans antialiased text-visa-text bg-white">
+    <header x-data="{ open: false, scrolled: false }"
+            @scroll.window="scrolled = (window.pageYOffset > 50)"
+            :class="scrolled ? 'fixed top-0 w-full z-50 bg-white shadow-lg py-2 transition-all duration-300' : 'relative z-50 bg-white py-4 transition-all duration-300'"
+            class="border-b border-gray-100">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+
+            <a href="/" class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-visa-red text-white flex items-center justify-center rounded-full font-bold text-xl"><i class="fa-solid fa-paper-plane"></i></div>
+                <span class="text-2xl font-bold font-heading text-visa-blue">Vidya<span class="text-visa-red">Voyage</span></span>
+            </a>
+
+            <nav class="hidden lg:flex items-center gap-8 font-medium text-visa-blue font-heading">
+                <a href="/" class="hover:text-visa-red transition">Home</a>
+                <a href="#about" class="hover:text-visa-red transition">About</a>
+                <a href="#services" class="hover:text-visa-red transition">Services</a>
+                <a href="/university" class="hover:text-visa-red transition">Universities</a>
+                <a href="#blog" class="hover:text-visa-red transition">Blog</a>
+                <a href="#contact" class="hover:text-visa-red transition">Contact</a>
+            </nav>
+
+            <div class="hidden lg:block">
+                <a href="#" class="bg-visa-red text-white px-6 py-3 rounded hover:bg-visa-blue transition duration-300 font-heading font-semibold uppercase text-sm tracking-wide">
+                    Book Consultation
+                </a>
+            </div>
+
+            <button @click="open = !open" class="lg:hidden text-3xl text-visa-blue">
+                <i :class="open ? 'fa-solid fa-xmark' : 'fa-solid fa-bars'"></i>
+            </button>
+        </div>
+
+        <div x-show="open"
+             x-transition:enter="transition ease-out duration-200"
+             x-transition:enter-start="opacity-0 -translate-y-2"
+             x-transition:enter-end="opacity-100 translate-y-0"
+             class="lg:hidden absolute top-full left-0 w-full bg-white shadow-xl border-t border-gray-100">
+            <nav class="flex flex-col p-6 space-y-4 font-heading font-semibold text-visa-blue">
+                <a href="/" class="hover:text-visa-red">Home</a>
+                <a href="#about" class="hover:text-visa-red">About</a>
+                <a href="#services" class="hover:text-visa-red">Services</a>
+                <a href="/university" class="hover:text-visa-red">Universities</a>
+                <a href="#contact" class="hover:text-visa-red">Contact</a>
+                <a href="#" class="bg-visa-red text-white px-4 py-3 text-center rounded">Book Consultation</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <%- body %> </main>
+
+     <footer class="bg-visa-blue text-white pt-16 pb-8">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+            <div>
+                <a href="#" class="flex items-center gap-2 mb-6">
+                    <div class="w-8 h-8 bg-visa-red flex items-center justify-center rounded-full"><i class="fa-solid fa-paper-plane text-sm"></i></div>
+                    <span class="text-2xl font-bold font-heading">Vidhya Voyage</span>
+                </a>
+                <p class="text-gray-300 text-sm mb-6 leading-relaxed">Redefining international education. We empower students to navigate their global academic journey with confidence and clarity.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="w-10 h-10 rounded bg-white/10 flex items-center justify-center hover:bg-visa-red transition"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="w-10 h-10 rounded bg-white/10 flex items-center justify-center hover:bg-visa-red transition"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="w-10 h-10 rounded bg-white/10 flex items-center justify-center hover:bg-visa-red transition"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-bold font-heading mb-6 border-b-2 border-visa-red inline-block pb-1">Quick Links</h3>
+                <ul class="space-y-3 text-sm text-gray-300">
+                    <li><a href="#" class="hover:text-visa-red transition">About Us</a></li>
+                    <li><a href="#" class="hover:text-visa-red transition">Our Services</a></li>
+                    <li><a href="#" class="hover:text-visa-red transition">Visa Information</a></li>
+                    <li><a href="#" class="hover:text-visa-red transition">Testimonials</a></li>
+                    <li><a href="#" class="hover:text-visa-red transition">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-bold font-heading mb-6 border-b-2 border-visa-red inline-block pb-1">Services</h3>
+                <ul class="space-y-3 text-sm text-gray-300">
+                    <li><a href="#" class="hover:text-visa-red transition">Student Visa</a></li>
+                    <li><a href="#" class="hover:text-visa-red transition">Business Visa</a></li>
+                    <li><a href="#" class="hover:text-visa-red transition">Family Sponsorship</a></li>
+                    <li><a href="#" class="hover:text-visa-red transition">Skilled Worker</a></li>
+                    <li><a href="#" class="hover:text-visa-red transition">Tourist Visa</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-bold font-heading mb-6 border-b-2 border-visa-red inline-block pb-1">Contact Info</h3>
+                <ul class="space-y-4 text-sm text-gray-300">
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-location-dot text-visa-red mt-1"></i>
+                        <span>123 Immigration St, Suite 100,<br>New York, NY 10012</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fa-solid fa-phone text-visa-red"></i>
+                        <span>+44 7700 900000 </span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fa-solid fa-envelope text-visa-red"></i>
+                        <span> vidyavoyageltd@gmail.com</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="border-t border-white/10 pt-8 text-center text-sm text-gray-400">
+            <p>&copy; 2024 Vidhya Voyage. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        // Hero Slider
+        var heroSwiper = new Swiper(".heroSwiper", {
+            loop: true,
+            effect: 'fade',
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+
+        // Testimonial Slider
+        var testimonialSwiper = new Swiper(".testimonialSwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+                delay: 4000,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                },
+            },
+        });
+    </script>
+    </body>
+</html>
