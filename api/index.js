@@ -1,19 +1,21 @@
-const express = require('express');
+const express = require("express");
+const path = require("path");
 const app = express();
-const path = require('path');
 
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'));
+// Set view engine
+app.set("view engine", "ejs");
+app.set("views", path.join(process.cwd(), "views")); // IMPORTANT
 
-// Home Route
-app.get('/', (req, res) => {
-    res.render('home', { title: 'Home' });
+// Home route
+app.get("/", (req, res) => {
+  res.render("home", { title: "Home" });
 });
 
-// University Route
-app.get('/university', (req, res) => {
-    res.render('university', { title: 'Universities' });
+// University route
+app.get("/university", (req, res) => {
+  res.render("university", { title: "Universities" });
 });
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Server: http://localhost:${PORT}`));
+// ❌ DO NOT use app.listen()
+// ✅ Export app for Vercel
+module.exports = app;
