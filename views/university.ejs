@@ -1,166 +1,38 @@
 <%- include('layout', { body: `
     <div>
-    <section class="py-20 bg-slate-50" x-data="{ activeTab: 'UK' }">
-    <div class="container mx-auto px-4">
+        <section class="py-20 bg-slate-50" x-data="{ activeTab: 'UK' }">
+        <div class="container mx-auto px-4">
 
-        <div class="max-w-4xl mx-auto text-center mb-12">
-            <span class="text-blue-600 font-bold uppercase tracking-widest text-sm">Vidya Voyage Network</span>
-            <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 mt-3 mb-6 leading-tight">
-                Our Global <span class="text-blue-600">University Partners</span>
-            </h2>
-            <p class="text-lg text-slate-600 leading-relaxed">
-                We believe in the best for our students. Explore our vast network of top-ranked institutions across the globe, carefully selected to ensure your academic success.
-            </p>
-        </div>
-
-        <div class="bg-white rounded-3xl shadow-2xl shadow-slate-200/60 overflow-hidden border border-slate-100">
-
-            <div class="flex overflow-x-auto lg:justify-center gap-2 p-4 bg-slate-50/80 border-b border-slate-100 no-scrollbar">
-                <template x-for="country in ['UK', 'Australia', 'New Zealand', 'USA', 'Canada', 'Asia', 'Europe']">
-                    <button
-                        @click="activeTab = country"
-                        :class="activeTab === country ? 'bg-blue-600 text-white shadow-lg scale-105' : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'"
-                        class="whitespace-nowrap px-8 py-3 rounded-full font-bold transition-all duration-300 text-sm tracking-wide transform"
-                        x-text="country">
-                    </button>
-                </template>
+            <div class="max-w-4xl mx-auto text-center mb-12">
+                <span class="text-blue-600 font-bold uppercase tracking-widest text-sm">Vidya Voyage Network</span>
+                <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 mt-3 mb-6 leading-tight">
+                    Our Global <span class="text-blue-600">University Partners</span>
+                </h2>
+                <p class="text-lg text-slate-600 leading-relaxed">
+                    We believe in the best for our students. Explore our vast network of top-ranked institutions across the globe, carefully selected to ensure your academic success.
+                </p>
             </div>
 
-           <div class="p-8 md:p-12">
-    <div x-show="activeTab === 'UK'" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4">
-        <div class="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-                <h3 class="text-3xl font-bold text-slate-900 mb-6 flex items-center gap-3">🌏 Study in UK</h3>
-                <ul class="grid sm:grid-cols-2 gap-3 text-sm">
-                    <template x-for="uni in ['Ulster University', 'Northumbria University', 'University of Greenwich', 'Coventry University', 'Solent University', 'University of South Wales', 'University of Sunderland', 'Kingston University', 'De Montfort University', 'Richmond University London', 'University of West London', 'Anglia Ruskin University', 'Royal Holloway', 'Queens University Belfast', 'University of Leicester']">
-                        <li class="flex items-start gap-2 text-slate-700">
-                            <i class="fas fa-check-circle text-blue-600 mt-1"></i>
-                            <span x-text="uni"></span>
-                        </li>
+            <div class="bg-white rounded-3xl shadow-2xl shadow-slate-200/60 overflow-hidden border border-slate-100">
+
+                <div class="flex overflow-x-auto lg:justify-center gap-2 p-4 bg-slate-50/80 border-b border-slate-100 no-scrollbar">
+                    <template x-for="country in ['UK', 'Australia', 'New Zealand', 'USA', 'Canada', 'Asia', 'Europe']">
+                        <button
+                            @click="activeTab = country"
+                            :class="activeTab === country ? 'bg-blue-600 text-white shadow-lg scale-105' : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'"
+                            class="whitespace-nowrap px-8 py-3 rounded-full font-bold transition-all duration-300 text-sm tracking-wide transform"
+                            x-text="country">
+                        </button>
                     </template>
-                </ul>
-            </div>
-            <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=600&q=80" class="rounded-3xl shadow-2xl hidden lg:block border-8 border-white" alt="UK">
-        </div>
-    </div>
-
-    <div x-show="activeTab === 'Australia'" x-cloak x-transition:enter="transition ease-out duration-300">
-        <div class="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-                <h3 class="text-3xl font-bold text-slate-900 mb-6 flex items-center gap-3">🌏 Study in Australia</h3>
-                <ul class="grid sm:grid-cols-2 gap-3 text-sm">
-                    <template x-for="uni in ['University of Canberra', 'Torrens University', 'Charles Darwin University', 'Charles Sturt University', 'University of Wollongong', 'Southern Cross University', 'CQ University', 'Edith Cowan University', 'Deakin University', 'La Trobe University', 'Flinders University']">
-                        <li class="flex items-start gap-2 text-slate-700">
-                            <i class="fas fa-check-circle text-blue-600 mt-1"></i>
-                            <span x-text="uni"></span>
-                        </li>
-                    </template>
-                </ul>
-            </div>
-            <img src="https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?auto=format&fit=crop&w=600&q=80" class="rounded-3xl shadow-2xl hidden lg:block border-8 border-white" alt="Australia">
-        </div>
-    </div>
-
-    <div x-show="activeTab === 'New Zealand'" x-cloak x-transition:enter="transition ease-out duration-300">
-        <div class="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-                <h3 class="text-3xl font-bold text-slate-900 mb-6 flex items-center gap-3">🌏 Study in New Zealand</h3>
-                <ul class="grid sm:grid-cols-2 gap-3 text-sm">
-                    <template x-for="uni in ['Victoria University of Wellington', 'University of Otago', 'The University of Waikato', 'Southern Institute of Technology', 'Massey University', 'Manukau Institute of Technology', 'Eastern Institute of Technology', 'AUT University', 'Auckland Institute of Studies', 'Ara Institute of Canterbury']">
-                        <li class="flex items-start gap-2 text-slate-700">
-                            <i class="fas fa-check-circle text-blue-600 mt-1"></i>
-                            <span x-text="uni"></span>
-                        </li>
-                    </template>
-                </ul>
-            </div>
-            <img src="https://images.unsplash.com/photo-1507699622108-4be3abd695ad?q=80&w=1000&auto=format&fit=crop&w=600&q=80" class="rounded-3xl shadow-2xl hidden lg:block border-8 border-white" alt="NZ">
-        </div>
-    </div>
-
-    <div x-show="activeTab === 'USA'" x-cloak x-transition:enter="transition ease-out duration-300">
-        <div class="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-                <h3 class="text-3xl font-bold text-slate-900 mb-6 flex items-center gap-3">🌏 Study in USA</h3>
-                <ul class="grid sm:grid-cols-1 gap-3 text-sm">
-                    <template x-for="uni in ['University of West Florida (UWF)', 'University of Maryland, Baltimore County (UMBC)', 'Auburn University Alabama', 'The University of Alabama (UA)', 'Murray State University', 'Kent State University', 'CSU San Bernardino International Programs', 'California State University, San Bernardino']">
-                        <li class="flex items-start gap-2 text-slate-700">
-                            <i class="fas fa-check-circle text-blue-600 mt-1"></i>
-                            <span x-text="uni"></span>
-                        </li>
-                    </template>
-                </ul>
-            </div>
-            <img src="https://images.unsplash.com/photo-1468276311594-df7cb65d8df6?q=80&w=1000&auto=format&fit=crop&w=600&q=80" class="rounded-3xl shadow-2xl hidden lg:block border-8 border-white" alt="USA">
-        </div>
-    </div>
-
-    <div x-show="activeTab === 'Canada'" x-cloak x-transition:enter="transition ease-out duration-300">
-        <div class="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-                <h3 class="text-3xl font-bold text-slate-900 mb-6 flex items-center gap-3">🌏 Study in Canada</h3>
-                <ul class="grid sm:grid-cols-2 gap-3 text-sm">
-                    <template x-for="uni in ['Wilfrid Laurier University', 'University of Regina', 'University of Manitoba', 'University Canada West', 'SAIT', 'Niagara College', 'Mount Allison University', 'MacEwan University', 'Lethbridge College', 'Fanshawe College', 'Capilano University', 'BCIT', 'Algoma University']">
-                        <li class="flex items-start gap-2 text-slate-700">
-                            <i class="fas fa-check-circle text-blue-600 mt-1"></i>
-                            <span x-text="uni"></span>
-                        </li>
-                    </template>
-                </ul>
-            </div>
-            <img src="https://images.unsplash.com/photo-1503614472-8c93d56e92ce?auto=format&fit=crop&w=600&q=80" class="rounded-3xl shadow-2xl hidden lg:block border-8 border-white" alt="Canada">
-        </div>
-    </div>
-
-<div x-show="activeTab === 'Asia'" x-cloak x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4">
-    <div class="grid lg:grid-cols-2 gap-12 items-center">
-        <div>
-            <h3 class="text-3xl font-bold text-slate-900 mb-6 flex items-center gap-3">🌏 Study in Asia</h3>
-
-            <h4 class="text-2xl font-medium text-slate-900 mb-6 flex items-center gap-3">Malaysia</h4>
-            <ul class="grid sm:grid-cols-2 gap-3 text-sm mb-8">
-                <template x-for="uni in ['INTI University', 'City University', 'University of Cyberjaya', 'Multimedia University', 'Asia Pacific University', 'International Islamic University', 'SEGI University', 'MAHSA University']">
-                    <li class="flex items-start gap-2 text-slate-700">
-                        <i class="fas fa-check-circle text-blue-600 mt-1"></i>
-                        <span x-text="uni"></span>
-                    </li>
-                </template>
-            </ul>
-
-            <div class="grid sm:grid-cols-2 gap-6">
-                <div>
-                    <h4 class="text-2xl font-medium text-slate-900 mb-6 flex items-center gap-3">Singapore</h4>
-                    <ul class="text-sm">
-                        <li class="flex items-start gap-2 text-slate-700">
-                            <i class="fas fa-check-circle text-blue-600 mt-1"></i>
-                            <span>Singapore University of Technology and Design</span>
-                        </li>
-                    </ul>
                 </div>
-                <div>
-                    <h4 class="text-2xl font-medium text-slate-900 mb-6 flex items-center gap-3">Thailand</h4>
-                    <ul class="text-sm">
-                        <li class="flex items-start gap-2 text-slate-700">
-                            <i class="fas fa-check-circle text-blue-600 mt-1"></i>
-                            <span>Shinawatra University</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <img src="https://images.unsplash.com/photo-1596422846543-75c6fc197f07?q=80&w=1000&auto=format&fit=crop&w=600&q=80" class="rounded-3xl shadow-2xl hidden lg:block border-8 border-white" alt="Asia Education">
-    </div>
-</div>
 
-<div x-show="activeTab === 'Europe'" x-cloak x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4">
-    <div class="grid lg:grid-cols-2 gap-12 items-center">
-        <div>
-            <h3 class="text-3xl font-bold text-slate-900 mb-6 flex items-center gap-3">🌏 Study in Europe</h3>
-            <div class="grid sm:grid-cols-2 gap-6 pt-4 border-t border-slate-100">
+            <div class="p-8 md:p-12">
+        <div x-show="activeTab === 'UK'" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <div>
-                    <h4 class="text-2xl font-medium text-slate-900 mb-6 flex items-center gap-3">Denmark</h4>
-                    <ul class="text-sm mb-8 grid sm:grid-cols-1 gap-3">
-                        <template x-for="uni in ['Copenhagen Business College', 'International Business Academy', 'Technical University of Denmark', 'Southern Denmark University']">
+                    <h3 class="text-3xl font-bold text-slate-900 mb-6 flex items-center gap-3">🌏 Study in UK</h3>
+                    <ul class="grid sm:grid-cols-2 gap-3 text-sm">
+                        <template x-for="uni in ['Ulster University', 'Northumbria University', 'University of Greenwich', 'Coventry University', 'Solent University', 'University of South Wales', 'University of Sunderland', 'Kingston University', 'De Montfort University', 'Richmond University London', 'University of West London', 'Anglia Ruskin University', 'Royal Holloway', 'Queens University Belfast', 'University of Leicester']">
                             <li class="flex items-start gap-2 text-slate-700">
                                 <i class="fas fa-check-circle text-blue-600 mt-1"></i>
                                 <span x-text="uni"></span>
@@ -168,54 +40,182 @@
                         </template>
                     </ul>
                 </div>
-                <div>
-                    <h4 class="text-2xl font-medium text-slate-900 mb-6 flex items-center gap-3">Hungary</h4>
-                     <ul class="text-sm mb-8 grid sm:grid-cols-1 gap-3">
-                        <template x-for="uni in ['University of Debrecen','Budapest Metropolitan University','Wekerley Business School']">
-                            <li class="flex items-start gap-2 text-slate-700">
-                                <i class="fas fa-check-circle text-blue-600 mt-1"></i>
-                                <span x-text="uni"></span>
-                            </li>
-                        </template>
-                    </ul>
-                </div>
-                 <div>
-                    <h4 class="text-2xl font-medium text-slate-900 mb-6 flex items-center gap-3">Ireland</h4>
-                     <ul class="text-sm mb-8 grid sm:grid-cols-1 gap-3">
-                        <template x-for="uni in ['Dublin Business School','IBAT College','College of Computing and Technology Dublin','Griffith College','American College Dublin','Independent College']">
-                            <li class="flex items-start gap-2 text-slate-700">
-                                <i class="fas fa-check-circle text-blue-600 mt-1"></i>
-                                <span x-text="uni"></span>
-                            </li>
-                        </template>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-2xl font-medium text-slate-900 mb-6 flex items-center gap-3">Malta</h4>
-                     <ul class="text-sm mb-8 grid sm:grid-cols-1 gap-3">
-                        <template x-for="uni in ['GBS Malta','Idea College','Ascencia Malta']">
-                            <li class="flex items-start gap-2 text-slate-700">
-                                <i class="fas fa-check-circle text-blue-600 mt-1"></i>
-                                <span x-text="uni"></span>
-                            </li>
-                        </template>
-                    </ul>
-                </div>
+                <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=600&q=80" class="rounded-3xl shadow-2xl hidden lg:block border-8 border-white" alt="UK">
             </div>
         </div>
-        <img src="https://images.unsplash.com/photo-1491156855053-9cdff72c7f85?q=80&w=1000&auto=format&fit=crop" class="rounded-3xl shadow-2xl hidden lg:block border-8 border-white" alt="Europe Education">
-    </div>
-</div>
-</div>
+
+        <div x-show="activeTab === 'Australia'" x-cloak x-transition:enter="transition ease-out duration-300">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-3xl font-bold text-slate-900 mb-6 flex items-center gap-3">🌏 Study in Australia</h3>
+                    <ul class="grid sm:grid-cols-2 gap-3 text-sm">
+                        <template x-for="uni in ['University of Canberra', 'Torrens University', 'Charles Darwin University', 'Charles Sturt University', 'University of Wollongong', 'Southern Cross University', 'CQ University', 'Edith Cowan University', 'Deakin University', 'La Trobe University', 'Flinders University']">
+                            <li class="flex items-start gap-2 text-slate-700">
+                                <i class="fas fa-check-circle text-blue-600 mt-1"></i>
+                                <span x-text="uni"></span>
+                            </li>
+                        </template>
+                    </ul>
+                </div>
+                <img src="https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?auto=format&fit=crop&w=600&q=80" class="rounded-3xl shadow-2xl hidden lg:block border-8 border-white" alt="Australia">
+            </div>
+        </div>
+
+        <div x-show="activeTab === 'New Zealand'" x-cloak x-transition:enter="transition ease-out duration-300">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-3xl font-bold text-slate-900 mb-6 flex items-center gap-3">🌏 Study in New Zealand</h3>
+                    <ul class="grid sm:grid-cols-2 gap-3 text-sm">
+                        <template x-for="uni in ['Victoria University of Wellington', 'University of Otago', 'The University of Waikato', 'Southern Institute of Technology', 'Massey University', 'Manukau Institute of Technology', 'Eastern Institute of Technology', 'AUT University', 'Auckland Institute of Studies', 'Ara Institute of Canterbury']">
+                            <li class="flex items-start gap-2 text-slate-700">
+                                <i class="fas fa-check-circle text-blue-600 mt-1"></i>
+                                <span x-text="uni"></span>
+                            </li>
+                        </template>
+                    </ul>
+                </div>
+                <img src="https://images.unsplash.com/photo-1507699622108-4be3abd695ad?q=80&w=1000&auto=format&fit=crop&w=600&q=80" class="rounded-3xl shadow-2xl hidden lg:block border-8 border-white" alt="NZ">
+            </div>
+        </div>
+
+        <div x-show="activeTab === 'USA'" x-cloak x-transition:enter="transition ease-out duration-300">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-3xl font-bold text-slate-900 mb-6 flex items-center gap-3">🌏 Study in USA</h3>
+                    <ul class="grid sm:grid-cols-1 gap-3 text-sm">
+                        <template x-for="uni in ['University of West Florida (UWF)', 'University of Maryland, Baltimore County (UMBC)', 'Auburn University Alabama', 'The University of Alabama (UA)', 'Murray State University', 'Kent State University', 'CSU San Bernardino International Programs', 'California State University, San Bernardino']">
+                            <li class="flex items-start gap-2 text-slate-700">
+                                <i class="fas fa-check-circle text-blue-600 mt-1"></i>
+                                <span x-text="uni"></span>
+                            </li>
+                        </template>
+                    </ul>
+                </div>
+                <img src="https://images.unsplash.com/photo-1468276311594-df7cb65d8df6?q=80&w=1000&auto=format&fit=crop&w=600&q=80" class="rounded-3xl shadow-2xl hidden lg:block border-8 border-white" alt="USA">
+            </div>
+        </div>
+
+        <div x-show="activeTab === 'Canada'" x-cloak x-transition:enter="transition ease-out duration-300">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-3xl font-bold text-slate-900 mb-6 flex items-center gap-3">🌏 Study in Canada</h3>
+                    <ul class="grid sm:grid-cols-2 gap-3 text-sm">
+                        <template x-for="uni in ['Wilfrid Laurier University', 'University of Regina', 'University of Manitoba', 'University Canada West', 'SAIT', 'Niagara College', 'Mount Allison University', 'MacEwan University', 'Lethbridge College', 'Fanshawe College', 'Capilano University', 'BCIT', 'Algoma University']">
+                            <li class="flex items-start gap-2 text-slate-700">
+                                <i class="fas fa-check-circle text-blue-600 mt-1"></i>
+                                <span x-text="uni"></span>
+                            </li>
+                        </template>
+                    </ul>
+                </div>
+                <img src="https://images.unsplash.com/photo-1503614472-8c93d56e92ce?auto=format&fit=crop&w=600&q=80" class="rounded-3xl shadow-2xl hidden lg:block border-8 border-white" alt="Canada">
+            </div>
+        </div>
+
+    <div x-show="activeTab === 'Asia'" x-cloak x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <h3 class="text-3xl font-bold text-slate-900 mb-6 flex items-center gap-3">🌏 Study in Asia</h3>
+
+                <h4 class="text-2xl font-medium text-slate-900 mb-6 flex items-center gap-3">Malaysia</h4>
+                <ul class="grid sm:grid-cols-2 gap-3 text-sm mb-8">
+                    <template x-for="uni in ['INTI University', 'City University', 'University of Cyberjaya', 'Multimedia University', 'Asia Pacific University', 'International Islamic University', 'SEGI University', 'MAHSA University']">
+                        <li class="flex items-start gap-2 text-slate-700">
+                            <i class="fas fa-check-circle text-blue-600 mt-1"></i>
+                            <span x-text="uni"></span>
+                        </li>
+                    </template>
+                </ul>
+
+                <div class="grid sm:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="text-2xl font-medium text-slate-900 mb-6 flex items-center gap-3">Singapore</h4>
+                        <ul class="text-sm">
+                            <li class="flex items-start gap-2 text-slate-700">
+                                <i class="fas fa-check-circle text-blue-600 mt-1"></i>
+                                <span>Singapore University of Technology and Design</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-2xl font-medium text-slate-900 mb-6 flex items-center gap-3">Thailand</h4>
+                        <ul class="text-sm">
+                            <li class="flex items-start gap-2 text-slate-700">
+                                <i class="fas fa-check-circle text-blue-600 mt-1"></i>
+                                <span>Shinawatra University</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <img src="https://images.unsplash.com/photo-1596422846543-75c6fc197f07?q=80&w=1000&auto=format&fit=crop&w=600&q=80" class="rounded-3xl shadow-2xl hidden lg:block border-8 border-white" alt="Asia Education">
         </div>
     </div>
-</section>
 
-<style>
-    .no-scrollbar::-webkit-scrollbar { display: none; }
-    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-    [x-cloak] { display: none !important; }
-</style>
-</div>
+    <div x-show="activeTab === 'Europe'" x-cloak x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <h3 class="text-3xl font-bold text-slate-900 mb-6 flex items-center gap-3">🌏 Study in Europe</h3>
+                <div class="grid sm:grid-cols-2 gap-6 pt-4 border-t border-slate-100">
+                    <div>
+                        <h4 class="text-2xl font-medium text-slate-900 mb-6 flex items-center gap-3">Denmark</h4>
+                        <ul class="text-sm mb-8 grid sm:grid-cols-1 gap-3">
+                            <template x-for="uni in ['Copenhagen Business College', 'International Business Academy', 'Technical University of Denmark', 'Southern Denmark University']">
+                                <li class="flex items-start gap-2 text-slate-700">
+                                    <i class="fas fa-check-circle text-blue-600 mt-1"></i>
+                                    <span x-text="uni"></span>
+                                </li>
+                            </template>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-2xl font-medium text-slate-900 mb-6 flex items-center gap-3">Hungary</h4>
+                        <ul class="text-sm mb-8 grid sm:grid-cols-1 gap-3">
+                            <template x-for="uni in ['University of Debrecen','Budapest Metropolitan University','Wekerley Business School']">
+                                <li class="flex items-start gap-2 text-slate-700">
+                                    <i class="fas fa-check-circle text-blue-600 mt-1"></i>
+                                    <span x-text="uni"></span>
+                                </li>
+                            </template>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-2xl font-medium text-slate-900 mb-6 flex items-center gap-3">Ireland</h4>
+                        <ul class="text-sm mb-8 grid sm:grid-cols-1 gap-3">
+                            <template x-for="uni in ['Dublin Business School','IBAT College','College of Computing and Technology Dublin','Griffith College','American College Dublin','Independent College']">
+                                <li class="flex items-start gap-2 text-slate-700">
+                                    <i class="fas fa-check-circle text-blue-600 mt-1"></i>
+                                    <span x-text="uni"></span>
+                                </li>
+                            </template>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-2xl font-medium text-slate-900 mb-6 flex items-center gap-3">Malta</h4>
+                        <ul class="text-sm mb-8 grid sm:grid-cols-1 gap-3">
+                            <template x-for="uni in ['GBS Malta','Idea College','Ascencia Malta']">
+                                <li class="flex items-start gap-2 text-slate-700">
+                                    <i class="fas fa-check-circle text-blue-600 mt-1"></i>
+                                    <span x-text="uni"></span>
+                                </li>
+                            </template>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <img src="https://images.unsplash.com/photo-1491156855053-9cdff72c7f85?q=80&w=1000&auto=format&fit=crop" class="rounded-3xl shadow-2xl hidden lg:block border-8 border-white" alt="Europe Education">
+        </div>
+    </div>
+    </div>
+            </div>
+        </div>
+        </section>
+
+        <style>
+            .no-scrollbar::-webkit-scrollbar { display: none; }
+            .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+            [x-cloak] { display: none !important; }
+        </style>
+    </div>
 
 ` }) %>
