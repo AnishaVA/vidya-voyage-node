@@ -23,8 +23,9 @@
         <div class="container mx-auto px-4 flex justify-between items-center">
 
             <a href="/" class="flex items-center gap-2">
-                <div class="w-10 h-10 bg-visa-red text-white flex items-center justify-center rounded-full font-bold text-xl"><i class="fa-solid fa-paper-plane"></i></div>
-                <span class="text-2xl font-bold font-heading text-visa-blue">Vidya<span class="text-visa-red">Voyage</span></span>
+                <!-- <div class="w-10 h-10 bg-visa-red text-white flex items-center justify-center rounded-full font-bold text-xl"><i class="fa-solid fa-paper-plane"></i></div>
+                <span class="text-2xl font-bold font-heading text-visa-blue">Vidya<span class="text-visa-red">Voyage</span></span> -->
+                <img src="/images/logo.png" alt="Logo" width="80">
             </a>
 
             <nav class="hidden lg:flex items-center gap-8 font-medium text-visa-blue font-heading">
@@ -37,9 +38,16 @@
             </nav>
 
             <div class="hidden lg:block">
-                <a href="#" class="bg-visa-red text-white px-6 py-3 rounded hover:bg-visa-blue transition duration-300 font-heading font-semibold uppercase text-sm tracking-wide">
-                    Book Consultation
-                </a>
+               <a 
+  href="https://wa.me/+447352172270?text=Hello%20I%20would%20like%20to%20book%20a%20consultation"
+  target="_blank"
+  class=" bg-visa-red text-white px-6 py-3 rounded 
+         transition duration-300 
+         font-heading font-semibold uppercase text-sm tracking-wide"
+>
+  Book Consultation
+</a>
+
             </div>
 
             <button @click="open = !open" class="lg:hidden text-3xl text-visa-blue">
@@ -67,7 +75,7 @@
         <%- body %> </main>
 
      <footer class="bg-visa-blue text-white pt-16 pb-8">
-        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             <div>
                 <a href="#" class="flex items-center gap-2 mb-6">
                     <div class="w-8 h-8 bg-visa-red flex items-center justify-center rounded-full"><i class="fa-solid fa-paper-plane text-sm"></i></div>
@@ -92,7 +100,7 @@
                 </ul>
             </div>
 
-            <div>
+            <!-- <div>
                 <h3 class="text-xl font-bold font-heading mb-6 border-b-2 border-visa-red inline-block pb-1">Services</h3>
                 <ul class="space-y-3 text-sm text-gray-300">
                     <li><a href="#" class="hover:text-visa-red transition">Student Visa</a></li>
@@ -101,7 +109,7 @@
                     <li><a href="#" class="hover:text-visa-red transition">Skilled Worker</a></li>
                     <li><a href="#" class="hover:text-visa-red transition">Tourist Visa</a></li>
                 </ul>
-            </div>
+            </div> -->
 
             <div>
                 <h3 class="text-xl font-bold font-heading mb-6 border-b-2 border-visa-red inline-block pb-1">Contact Info</h3>

@@ -7,6 +7,8 @@ const app = express();
 app.set("view engine", "ejs");
 app.set("views", path.join(process.cwd(), "views")); // IMPORTANT
 
+app.use(express.static('public'));
+
 // Home route
 app.get("/", (req, res) => {
   res.render("home", { title: "Home" });
