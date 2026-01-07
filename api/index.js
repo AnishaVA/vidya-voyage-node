@@ -3,30 +3,27 @@ const path = require("path");
 
 const app = express();
 
-// Set view engine
+// View engine
 app.set("view engine", "ejs");
-app.set("views", path.join(process.cwd(), "views")); // IMPORTANT
+app.set("views", path.join(process.cwd(), "views"));
 
-app.use(express.static('public'));
+// ✅ FIX: correct public path for Vercel
+app.use(express.static(path.join(process.cwd(), "public")));
 
-// Home route
+// Routes
 app.get("/", (req, res) => {
   res.render("home", { title: "Home" });
 });
 
-// University route
 app.get("/university", (req, res) => {
   res.render("university", { title: "Universities" });
 });
 
-// contact route
 app.get("/contact", (req, res) => {
   res.render("contact", { title: "Contact Us" });
 });
-/**
- * ✅ Run server ONLY when running locally
- * ❌ Vercel will ignore this and use the exported app
- */
+
+// Local only
 if (process.env.NODE_ENV !== "production") {
   const PORT = process.env.PORT || 3000;
   app.listen(PORT, () => {
@@ -34,6 +31,4 @@ if (process.env.NODE_ENV !== "production") {
   });
 }
 
-// ❌ DO NOT use app.listen()
-// ✅ Export app for Vercel
 module.exports = app;
